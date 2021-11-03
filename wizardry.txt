@@ -1,0 +1,27 @@
+
+var wizardName = 'Ermlich Lightbringer'
+var wizardAge = '76' // number
+var maxWizardAge = wizardAge * 5; // operations
+var isEvilWizard = false; // bool
+const wizardCirclet = 3.14; // constants
+var familiar = {name: 'xeto', type: 'hawk'}; // quick object 
+var spellComponents = ['nightshade', 'mandrake', 'bloodroot'];
+
+
+//Golem Factory
+const golemFactory = (type, golemId, speed, attackType)  =>
+{
+    const attack = () => {
+        return `${type} golem attacks with ${attackType}`;
+    }
+    return {type, golemId, speed, attackType, attack}
+
+}
+
+// Creating Factory Instances.  
+const stoneGolem = golemFactory('Stone Golem', 102, '30 feet', 'slam');
+const ironGolem = golemFactory('Iron Golem', 102, '30 feet', 'sword'); 
+
+stoneGolem.attack();
+ironGolem.attack();
+
